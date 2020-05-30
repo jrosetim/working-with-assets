@@ -31,7 +31,7 @@ module.exports = validate({
 
          new HtmlPlugin({
            title: 'GitHub App',
-           template: path.join(__dirname, 'src', 'html', 'template.html')
+           template: path.join(__dirname, 'src', 'html', 'template-dev.html')
          })
     ],
 
@@ -55,5 +55,13 @@ module.exports = validate({
           include: /src/,
           loaders : ['style','css']
         }]
+    },
+
+    resolve: {
+      alias: {
+        src: path.join(__dirname, 'src'),
+        components: path.join(__dirname, 'src', 'components')
+      }
     }
+
 })
