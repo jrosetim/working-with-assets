@@ -13,14 +13,15 @@ const Repos = ({classname, title, repos}) => (
   </div>
 )
 
-Repos.defaulProps ={
-  className: ''
+Repos.defaultProps ={
+  className: '',
+  repos: []
 }
-
 
 Repos.prototype = {
   className: PropTypes.string,
   title: PropTypes.string.isRequired,
   repos: PropTypes.array
 }
+
 export default Repos
